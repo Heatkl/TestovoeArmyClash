@@ -4,9 +4,12 @@ namespace Game.Battle
     using Game.Controller;
     using System.Collections.Generic;
     using UnityEngine;
+    using System;
 
     public class BattleController : MonoBehaviour
     {
+        public static event Action OnBattleFinished;
+
         private List<UnitController> _controllersA;
         private List<UnitController> _controllersB;
         private Dictionary<UnitModel, UnitController> _lookup;
@@ -63,6 +66,7 @@ namespace Game.Battle
             {
                 _isRunning = false;
                 Debug.Log("Battle Finished");
+                OnBattleFinished?.Invoke();
             }
         }
     }

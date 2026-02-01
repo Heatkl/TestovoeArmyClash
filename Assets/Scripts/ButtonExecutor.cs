@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//Класс заглушка для выполнения функионала минимального UI
 public class ButtonExecutor : MonoBehaviour
 {
     [Header("Buttons")]

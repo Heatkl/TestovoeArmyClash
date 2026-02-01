@@ -105,6 +105,7 @@ namespace Game.Controller
 
         private void HandleDeath(UnitModel obj)
         {
+            obj.OnDeath -= HandleDeath;
             _view.PlayDeath();
         }
     }
